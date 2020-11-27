@@ -28,9 +28,9 @@ Yesterday the morning mingle was much more active. We had six people showing up 
 ![](docs/screenshot-mingle.png)
 
 > "Here are a few nice colleagues /../ select the group that you have been
-> matched in to below. You are of course free to join any group of you where not selected. You have about 10 minutes to chat /.../"
+> matched to. You are of course free to join any group if you was not selected. You have about 10 minutes to chat /.../"
 
-We pick a few silly names for the groups matching real places at the office. We also suggests a few topics to kickstart the conversation. In the end (purple) I added some various information for new users.
+We pick a few silly names for the groups matching real places at the office. We also suggests a few topics to kickstart the conversation.
 
 The final two (lunch and afternoon) events has the exact same flow.
 
@@ -60,7 +60,7 @@ This software is licensed under the MIT license, for more information see [LICEN
 
 ## Primary Maintainer
 
-- Stefan Berggren https://github.com/nsg
+- [Stefan Berggren](https://github.com/nsg)
 
 ## Credits and references
 
