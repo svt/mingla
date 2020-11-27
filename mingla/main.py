@@ -3,6 +3,7 @@ from datetime import datetime
 import yaml
 import mingla.bot as bot
 
+
 def main():
     #   [daily message exists] --->  [coffee reaction exists] ---> trigger 09:15, remove coffee
     #      \                             \
@@ -34,7 +35,9 @@ def main():
         b.add_reaction(message, "cake")
     else:
         state_list = [
-            x["name"] for x in b.get_reactions(message) if config["bot_id"] in x["users"]
+            x["name"]
+            for x in b.get_reactions(message)
+            if config["bot_id"] in x["users"]
         ]
         if "coffee" in state_list:
             b.remove_reaction(message, "coffee")
@@ -45,6 +48,7 @@ def main():
         elif "cake" in state_list:
             b.remove_reaction(message, "cake")
             b.invite_members_to_room(b.get_users_reaction(message, "cake"))
+
 
 if __name__ == "__main__":
     main()

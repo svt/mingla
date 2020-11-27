@@ -6,6 +6,7 @@ from datetime import datetime
 from slack import WebClient
 from slack.errors import SlackApiError
 
+
 def n_even_chunks(lst, n):
     """Yield n as even chunks as possible from lst."""
     last = 0
@@ -14,33 +15,28 @@ def n_even_chunks(lst, n):
         yield lst[last:cur]
         last = cur
 
-class Bot:
 
+class Bot:
     def __init__(self, token, config, bot_env):
         self.client = None
         self.token = token
         self.config = config
         self.bot_env = bot_env
 
-
     def init_slack(self):
         self.client = WebClient(self.token)
-
 
     def get_subjects(self):
         subjects = self.config["subjects"]
         return f"*{random.choice(subjects)}* eller *{random.choice(subjects)}*"
 
-
     def get_place(self):
         places = self.config["places"]
         return random.choice(places)
 
-
     def get_tips(self):
         tips = self.config["tips"]
         return random.choice(tips)
-
 
     def invite_members_to_room(self, list_of_reaction_members):
         random.shuffle(list_of_reaction_members)
@@ -52,7 +48,8 @@ class Bot:
             text = self.config["texts"]["intro"]
 
         for chunk in n_even_chunks(
-            list_of_reaction_members, len(list_of_reaction_members) // self.config["group_size"]
+            list_of_reaction_members,
+            len(list_of_reaction_members) // self.config["group_size"],
         ):
             users = ", ".join([f"<@{x}>" for x in chunk])
             attach.append(
@@ -91,14 +88,12 @@ class Bot:
             assert e.response["error"]
             print(f"Got an error: {e.response['error']}")
 
-
     def add_reaction(self, message, reaction):
         self.client.reactions_add(
             channel=self.config["environments"][self.bot_env]["channel"],
             timestamp=message["ts"],
             name=reaction,
         )
-
 
     def remove_reaction(self, message, reaction):
         self.client.reactions_remove(
@@ -107,7 +102,6 @@ class Bot:
             name=reaction,
         )
 
-
     def get_reactions(self, message):
         message = self.client.reactions_get(
             channel=self.config["environments"][self.bot_env]["channel"],
@@ -115,19 +109,16 @@ class Bot:
         )
         return message["message"].get("reactions", [])
 
-
     def get_reaction(self, message, reaction):
         for r in self.get_reactions(message):
             if r["name"] == reaction:
                 return r
-
 
     def get_users_reaction(self, message, reaction):
         r = self.get_reaction(message, reaction)
         if r:
             return r["users"]
         return []
-
 
     def find_daily_reaction_message(self):
         response = self.client.conversations_history(
@@ -140,7 +131,6 @@ class Bot:
                 and re.match(fr"^VOTE {yday}.*", message["text"]) is not None
             ):
                 return message
-
 
     def list_active_users_in_room(self):
         if self.bot_env == "production":
@@ -157,7 +147,6 @@ class Bot:
                 if r.get("ok") and r.get("presence") == "active":
                     list_of_online_members.append(member)
         return list_of_online_members
-
 
     def send_message(self, text):
         try:
