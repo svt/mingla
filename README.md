@@ -54,7 +54,7 @@ Just run `mingla` at 09:00, 09:15, 12:00 and 14:50!
 
 ## Getting involved
 
-We love contributions, see [CONTRIBUTING](docs/CONTRIBUTING.md) for more information. Currently the bot assumes that you uses Slack and Jitsi Meet. But we love to receive contributions to add additional platforms. 
+We love contributions, see [CONTRIBUTING](docs/CONTRIBUTING.md) for more information.
 
 ## License
 
