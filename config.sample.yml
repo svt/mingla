@@ -1,0 +1,91 @@
+---
+
+environments:
+  production:
+    channel: "C01FCUZABCD" # Channel for production
+  development:
+    channel: "C01F6Q4ABCE" # Channel for development
+
+group_size: 3
+bot_id: "U01E8AXYZF" # The bot ID
+
+texts:
+  pre: >-
+    God morgon! Om 15 minuter börjar dagens första mingelevent! För att vara med på det klicka på :coffee:.
+    Det finns även ett lunch-mingel klockan 12:00, klicka på :sandwich: innan 12 för att vara med
+    på det. Samt ett eftermiddags-mingel vid 14:50, klicka på :cake: för att vara med.
+  intro: >-
+    Det finns några trevliga kollegor i samtalet här nedanför, klicka på den gruppen där ditt namn är med.
+    Är du inte med i listan så får du så klart hoppa in i valfri grupp.
+    Ni har ungefär 10 minuter på er att lära känna varandra lite bättre.
+    Var modig, var dig själv och ha roligt!
+  noop: >-
+    Det finns tyvärr inte tillräckligt många för att kunna sätta upp en grupp. Vill du prova ändå, hoppa in
+    här: https://meet.jit.si/some-room-name
+  footer: >-
+    Om ditt rum är tomt, ge andra chansen att hinna dit. Vänta där minst tre minuter innan du provar andra rum.
+
+tips:
+  - "På telefonen så är du aktiv när applikationen är öppen, på datorn är det upp till 30 minuter efter."
+  - "Du måste klicka på :coffee:, :sandwich: och :cake: innan utsatt tid för att bli pingad. Inget hindar dig att vara med ändå!"
+  - "Föreslå gärna teman, eller ännu bättre gör en pull request!"
+  - "Tiderna kan justeras, diskutera tillsammans och hitta en bra tid!"
+
+subjects:
+  - "Jag skulle vilja veta hur man…"
+  - "När jag pensionerar mig ska jag…"
+  - "När jag växer upp ska jag…"
+  - "Saker jag gillar att göra när jag är ledig"
+  - "Finns den fria viljan?"
+  - "Meningen med livet"
+  - "Hur blir man mer kreativ?"
+  - "Tips för att bråka konstruktivt"
+  - "Hur viker jag tvätt?"
+  - "Min favorittv-serie just nu?"
+  - "En kul förening jag är med i"
+  - "Mitt husdjur"
+  - "Någon som var viktig under mina tonår"
+  - "En dröm jag har"
+  - "Mat jag helt enkelt inte tycker om"
+  - "Missuppfattning jag haft långt upp i livet"
+  - "Den månad då jag trivs bäst"
+  - "Tips för att sova bättre"
+  - "Hur är en bra vän?"
+  - "Min odling"
+  - "Någon jag litar på"
+  - "Drömsemester"
+  - "Min inställning till manualer"
+  - "Att sjunga inför andra"
+  - "Något pinsamt som hänt mig nyligen"
+  - "Morgonmänniska eller kvällsmänniska?"
+  - "Så här beter jag mig på fester"
+  - "En lite tråkig sak som jag ändå gillar"
+  - "Mitt liv om 10 år"
+  - "Jag läser just nu / ska snart börja läsa"
+  - "En sång jag ibland går och nynnar på"
+  - "En sport jag bara provat en gång"
+  - "Min inställning till konst"
+
+places:
+  - "Radiocaféet"
+  - "Napster"
+  - "Lunarstorm"
+  - "Kaffeautomaten i BV-korridoren"
+  - "Gourmedia"
+  - "TV-husets café"
+  - "Ankan"
+  - "Futurum"
+  - "Roomy"
+  - "SVT-parkeringen"
+  - "Krutkällaren"
+  - "Programkontrollen"
+  - "Kontrollrum 8"
+  - "Televinken"
+  - "Galaxen"
+  - "S1"
+  - "Studio 2"
+  - "Daniels skrivbord"
+  - "Hjärtat"
+  - "Sminkloge 2"
+  - "Det offentliga rummet"
+  - "Jannes rum på Unionen"

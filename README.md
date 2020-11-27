@@ -40,15 +40,17 @@ Python 3.6+, a Slack team and social people.
 
 ## Installation
 
-TODO
+```
+pip install git+https://github.com/svt/mingla.git@master
+```
 
 ## Configuration
 
-TODO
+A sample configuration file is included here [config.sample.yml](config.sample.yml), edit it and rename it to `config.yml`.
 
 ## Usage
 
-TODO
+Just run `mingla` at 09:00, 09:15, 12:00 and 14:50!
 
 ## Getting involved
 
