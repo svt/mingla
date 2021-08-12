@@ -46,11 +46,6 @@ class Bot:
         random.shuffle(list_of_reaction_members)
         attach = []
 
-        if len(list_of_reaction_members) < self.config["group_size"]:
-            text = self.config["texts"]["noop"]
-        else:
-            text = self.config["texts"]["intro"]
-
         for chunk in split_users(
             list_of_reaction_members,
             self.config["group_size"],
@@ -84,7 +79,7 @@ class Bot:
                 username="Mingla",
                 channel=self.config["environments"][self.bot_env]["channel"],
                 icon_emoji=":coffee:",
-                text=text,
+                text=self.config["texts"]["intro"],
                 attachments=attach,
             )
         except SlackApiError as e:
