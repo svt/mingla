@@ -7,13 +7,17 @@ from slack import WebClient
 from slack.errors import SlackApiError
 
 
-def n_even_chunks(lst, n):
-    """Yield n as even chunks as possible from lst."""
-    last = 0
-    for i in range(1, n + 1):
-        cur = int(round(i * (len(lst) / n)))
-        yield lst[last:cur]
-        last = cur
+def split_users(users, room_size):
+    if room_size > 2:
+        lim = (room_size * 2) - 2
+    else:
+        lim = room_size + 1
+    if len(users) <= lim:
+        return [users]
+
+    s1 = split_users(users[:room_size], room_size)
+    s2 = split_users(users[room_size:], room_size)
+    return s1 + s2
 
 
 class Bot:
@@ -42,14 +46,9 @@ class Bot:
         random.shuffle(list_of_reaction_members)
         attach = []
 
-        if len(list_of_reaction_members) < self.config["group_size"]:
-            text = self.config["texts"]["noop"]
-        else:
-            text = self.config["texts"]["intro"]
-
-        for chunk in n_even_chunks(
+        for chunk in split_users(
             list_of_reaction_members,
-            len(list_of_reaction_members) // self.config["group_size"],
+            self.config["group_size"],
         ):
             users = ", ".join([f"<@{x}>" for x in chunk])
             attach.append(
@@ -80,7 +79,7 @@ class Bot:
                 username="Mingla",
                 channel=self.config["environments"][self.bot_env]["channel"],
                 icon_emoji=":coffee:",
-                text=text,
+                text=self.config["texts"]["intro"],
                 attachments=attach,
             )
         except SlackApiError as e:

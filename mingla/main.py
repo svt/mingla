@@ -41,13 +41,19 @@ def main():
         ]
         if "coffee" in state_list:
             b.remove_reaction(message, "coffee")
-            b.invite_members_to_room(b.get_users_reaction(message, "coffee"))
+            reaction_users = b.get_users_reaction(message, "coffee")
+            if len(reaction_users) > 1:
+                b.invite_members_to_room(reaction_users)
         elif "sandwich" in state_list:
             b.remove_reaction(message, "sandwich")
-            b.invite_members_to_room(b.get_users_reaction(message, "sandwich"))
+            reaction_users = b.get_users_reaction(message, "sandwich")
+            if len(reaction_users) > 1:
+                b.invite_members_to_room(reaction_users)
         elif "cake" in state_list:
             b.remove_reaction(message, "cake")
-            b.invite_members_to_room(b.get_users_reaction(message, "cake"))
+            reaction_users = b.get_users_reaction(message, "cake")
+            if len(reaction_users) > 1:
+                b.invite_members_to_room(reaction_users)
 
 
 if __name__ == "__main__":
