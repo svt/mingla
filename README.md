@@ -16,14 +16,9 @@ The bot is executed four times a day. The first run will write a message to to a
 
 We also ping everybody that's currently online (active) in the channel. We uses three different reactions, `:coffee:`, `:sandwich:` and `:cake:` to select the events you like to be part of. In the screenshot I have selected the 12:00 and 09:15 events.
 
-It looks like it was a lazy (or maybe busy) morning and I was the only one that was interested to chat at 9. At 09:15 when the bot did it's second execution for the day, it looked at the `:coffee:` reaction and noticed that where was to few people to create rooms. We have made the choice to have a minimum size of three people.
+It looks like it was a lazy (or maybe busy) morning and I was the only one that was interested to chat at 9. At 09:15 when the bot did it's second execution for the day, it looked at the `:coffee:` reaction and noticed that where was to few people to create rooms, so nothing will happen.
 
-![](docs/screenshot-noop.png)
-
-> "There are to few people to create groups. If you like to chat anyway,
-> try this one /.../"
-
-Yesterday the morning mingle was much more active. We had six people showing up (had selected "coffee"). This created two different groups. We made the choice to try to keep the chat groups between 3 to 5 people to make it more personal, without leaving anyone alone in a one to one conversation.
+Yesterday the morning mingle was much more active. We had six people showing up (had selected "coffee"). This created two different groups.
 
 ![](docs/screenshot-mingle.png)
 
