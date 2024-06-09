@@ -23,7 +23,7 @@ Yesterday the morning mingle was much more active. We had six people showing up 
 ![](docs/screenshot-mingle.png)
 
 > "Here are a few nice colleagues /../ select the group that you have been
-> matched to. You are of course free to join any group if you were not included. You have about 10 minutes to chat /.../"
+> matched to. You are of course free to join any group if you were not selected. You have about 10 minutes to chat /.../"
 
 We pick a few silly names for the groups matching real places at the office. We also suggest a few topics to kickstart the conversation.
 
