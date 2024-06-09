@@ -6,7 +6,7 @@ We have been using the bot since the middle of November 2020, and we have had se
 
 ## Flow
 
-The bot is executed four times a day. The first run will write a message to to a Slack channel we have chosen to call `#mingla-med-kollegor`. It contains some generic information, like the time slots when the mingle-events happen. Currently they're hard coded to 09:15, 12:00 and 14:50.
+The bot is executed four times a day. The first run will write a message to to a Slack channel we have chosen to call `#mingla-med-kollegor`. It contains some generic information, like the time slots when the mingle-events happen. Currently its hard coded to 09:15, 12:00 and 14:50.
 
 ![](docs/screenshot-morning.png)
 
